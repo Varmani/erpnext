@@ -100,7 +100,7 @@ def send_request(gateway_url, args):
 # Split gateway url to server and api url
 # =========================================================
 def scrub_gateway_url(url):
-	url = url.replace('http://', '').strip().split('/')
+	url = url.replace('http://', '').replace('https://', '').strip().split('/')
 	server = url.pop(0)
 	api_url = '/' + '/'.join(url)
 	if not api_url.endswith('?'):
