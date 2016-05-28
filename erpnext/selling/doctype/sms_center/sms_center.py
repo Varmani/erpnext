@@ -9,7 +9,8 @@ from frappe import msgprint, _
 
 from frappe.model.document import Document
 
-from erpnext.setup.doctype.sms_settings.sms_settings import send_sms
+#from erpnext.setup.doctype.sms_settings.sms_settings import send_sms
+from varmani.varmani.doctype.sms_customer.sms_customer import send_sms
 
 class SMSCenter(Document):
 	def create_receiver_list(self):
